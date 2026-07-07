@@ -11,10 +11,20 @@ const aiRoutes = require("./routes/ai.routes");
 
 const errorMiddleware = require("./middlewares/errors");
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://divya1234-ctrl.github.io"
+];
+
 app.use(
   cors({
-    // origin: "https://genie-food-app.netlify.app",
-    origin: "http://localhost:5173",
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) !== -1 || origin.startsWith("https://divya1234-ctrl.github.io")) {
+        return callback(null, true);
+      }
+      return callback(null, new Error("Not allowed by CORS"));
+    },
     credentials: true,
   }),
 );

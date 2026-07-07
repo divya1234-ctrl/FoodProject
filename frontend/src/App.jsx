@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <Router>
+      <Router basename="/FoodProject">
         <div className="App">
           <Header />
           <div className="container container-fluids">

@@ -19,7 +19,7 @@ const Restaurant = ({ restaurant }) => {
       alert("Unable to delete");
     });
   };
-  const defaultImageUrl = restaurant.images?.[0]?.url || "/images/images.png";
+  const defaultImageUrl = restaurant.images?.[0]?.url || `${import.meta.env.BASE_URL}images/images.png`;
   const customImageUrl =
     restaurant.name === "Food Court Express" ||
     restaurant.name === "Spice Kitchen"
@@ -37,7 +37,7 @@ const Restaurant = ({ restaurant }) => {
       alt={restaurant.name}
       onError={(e) => {
         e.target.onerror = null;
-        e.target.src = "/images/images.png";
+        e.target.src = `${import.meta.env.BASE_URL}images/images.png`;
       }}
     />
   </Link>

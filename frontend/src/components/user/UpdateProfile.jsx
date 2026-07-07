@@ -18,7 +18,7 @@ const UpdateProfile = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [avatar, setAvatar] = useState("");
-  const [avatarPreview, setAvatarPreview] = useState("/images/images.png");
+  const [avatarPreview, setAvatarPreview] = useState(`${import.meta.env.BASE_URL}images/images.png`);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

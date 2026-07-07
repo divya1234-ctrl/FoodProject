@@ -5,7 +5,7 @@ import qs from "qs";
 
 const baseURL = import.meta.env.VITE_API_URL
   ? `${import.meta.env.VITE_API_URL}/api`
-  : "/api";
+  : "https://internship-b7.onrender.com/api";
 
 const api = axios.create({
   baseURL,

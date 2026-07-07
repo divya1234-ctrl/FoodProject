@@ -81,7 +81,7 @@ const Fooditem = ({ fooditem, restaurant }) => {
       <div className="card p-3 rounded">
         <img
           className="card-img-top mx-auto food-image"
-          src={fooditem.images?.[0]?.url || "/images/placeholder.png"}
+          src={fooditem.images?.[0]?.url || `${import.meta.env.BASE_URL}images/placeholder.png`}
           alt={fooditem.name}
         />
 

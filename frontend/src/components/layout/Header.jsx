@@ -31,7 +31,7 @@ const Header = () => {
         {/* logo */}
         <div className="col-12 col-md-3">
           <Link to="/">
-            <img src="/images/logo.webp" alt="logo" className="logo" />
+            <img src={`${import.meta.env.BASE_URL}images/logo.webp`} alt="logo" className="logo" />
           </Link>
         </div>
 

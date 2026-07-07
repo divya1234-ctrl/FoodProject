@@ -17,7 +17,7 @@ const Register = () => {
   const { name, email, password, passwordConfirm, phoneNumber } = user;
 
   const [avatar, setAvatar] = useState("");
-  const [avatarPreview, setAvatarPreview] = useState("/images/images.png");
+  const [avatarPreview, setAvatarPreview] = useState(`${import.meta.env.BASE_URL}images/images.png`);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -51,7 +51,7 @@ const Register = () => {
     password,
     passwordConfirm,
     phoneNumber,
-    avatar: avatar === "" ? "/images/images.png" : avatar,
+    avatar: avatar === "" ? `${import.meta.env.BASE_URL}images/images.png` : avatar,
   };
 
   dispatch(register(userData)); 
